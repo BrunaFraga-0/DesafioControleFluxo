@@ -4,18 +4,20 @@ public class Contador {
 
         // Entrada de Dados - Solicitando que o usuário insira os valores dos dois parâmetros que serão usados na lógica de contagem  
 		Scanner terminal = new Scanner(System.in);
-		System.out.println("Digite o primeiro parâmetro: ");
+		
+        System.out.println("Digite o primeiro parâmetro: ");
 		int parametroUm = terminal.nextInt();
 		System.out.println("Digite o segundo parâmetro: ");
 		int parametroDois = terminal.nextInt();
 		
 		try {
-			//chamando o método contendo a lógica de contagem
+			// Chamando o método contendo a lógica de contagem
 			contar(parametroUm, parametroDois);
 		
-		}catch (? exception) {
-			//imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro
-		}
+		}catch (ParametrosInvalidosException ex) {
+			// Chamado para imprimir a mensagem de exceção caso se aplique
+            System.out.println(ex.getMessage());
+        }
 		
 	}
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
