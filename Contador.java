@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Contador {
 
 	public static void main(String[] args) {
@@ -26,8 +28,10 @@ public class Contador {
             throw new ParametrosInvalidosException("O primeiro parâmetro deve ser MENOR que o segundo.");
         }
 
-
 		int contagem = parametroDois - parametroUm;
-		//realizar o for para imprimir os números com base na variável contagem
+		// Saída de Dados - Lógica para imprimir uma sequência de números, que será definida pela variável contagem
+        for( int i = 1; i <= contagem; i++) {
+            System.out.println("Número -> " + i);
+        }
 	}
 }
